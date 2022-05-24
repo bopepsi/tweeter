@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -15,9 +17,68 @@ html {
  */
 
 body {
-  color: #545149;
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(60, 60, 60);
   background-color: #f4f1ec;
   font-size: 24px;
+}
+
+main {
+  padding: 1rem 5%;
+  margin: 0 auto;
+  background-color: #94a5a6;
+  background-image: url(http://www.transparenttextures.com/patterns/asfalt-light.png);
+}
+
+.warning{
+  color: red;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+main h2 {
+  margin: 1rem 0;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+}
+
+main form textarea {
+  border: none;
+  background-color: transparent;
+  border-bottom-style: solid;
+  margin: 1rem 0;
+  padding: 0.4rem;
+}
+
+main form textarea:focus{
+  outline: none;
+}
+
+main form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+main form div button {
+  color: white;
+  background-color: #404e68;
+  border: none;
+  font-family: "Bungee", cursive;
+  padding: 0.2rem;
+}
+
+main form div output {
+  color: rgb(60, 60, 60);
+  font-family: "Bungee", cursive;
 }
 
 /*

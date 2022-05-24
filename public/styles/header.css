@@ -1,0 +1,13 @@
+body>header {
+    color: white;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  background-color: #f9bd3c;
+  background-image: url(http://www.transparenttextures.com/patterns/asfalt-light.png);
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+header p {
+    font-size: 2rem;
+}

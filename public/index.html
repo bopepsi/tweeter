@@ -5,25 +5,99 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+      rel="stylesheet"
+    />
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/tweet-content.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+      defer
+    ></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <h2>tweeter</h2>
+      <div id="new-tweet">
+        <p><strong>Write</strong> a new tweet</p>
+        <i class="fa-solid fa-angles-down"></i>
+      </div>
     </nav>
-
+    <header>
+      <div>
+        <img src="/images/profile-hex.png" />
+      </div>
+      <br />
+      <div>
+        <p><strong>Bowen</strong> Jiang</p>
+      </div>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="post" action="/tweets/">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text" rows="1"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output
+              name="counter"
+              data-counter="charCounter"
+              class="counter"
+              for="tweet-text"
+              >140</output
+            >
+          </div>
+        </form>
+      </section>
+      <section id="tweet-section">
+        <article class="tweet-content">
+          <header >
+            <p id="tweet-content-name-img">
+              <img src="https://i.imgur.com/nlhLi3I.png" />
+              <span>Name</span>
+            </p>
+            <p id="tweet-content-name">@someid</p>
+          </header>
+          <p class="tweet-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <footer>
+            <time id="dates">10 days ago</time>
+            <div id="icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
