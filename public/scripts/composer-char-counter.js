@@ -30,7 +30,6 @@ $(document).ready(function () {
         if (inputLength > 0) {
             $emptyWarningElement.slideUp();
         }
-        console.log(event.target.value);
         let limit = maxLength - inputLength;
         counterOutput.textContent = limit;
         if (limit < 0) {
