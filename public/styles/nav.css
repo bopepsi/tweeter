@@ -17,15 +17,26 @@ nav h2 {
   align-self: center;
 }
 
-#new-tweet{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #new-tweet i {
-    color: red;
+  color: red;
+  animation: bounce 2s ease infinite forwards;
 }
 
-
+@keyframes bounce {
+  0% {
+    transform: translateY(-0.1rem);
+  }
+  50% {
+    transform: translateY(0.3rem);
+  }
+  100% {
+    transform: translateY(-0.1rem);
+  }
+}

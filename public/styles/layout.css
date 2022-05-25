@@ -98,6 +98,23 @@ main form div output {
   cursor: pointer;
 }
 
+.scroll-btn i {
+    animation: bounce2 2s ease infinite forwards;
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  50% {
+    transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(-0.2rem);
+  }
+}
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
