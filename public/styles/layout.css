@@ -5,6 +5,9 @@
  */
 html {
   box-sizing: border-box;
+  background-color: #94a5a6;
+  background-image: url(http://www.transparenttextures.com/patterns/asfalt-light.png);
+  height: 100%;
 }
 *,
 *:before,
@@ -30,7 +33,7 @@ main {
   background-image: url(http://www.transparenttextures.com/patterns/asfalt-light.png);
 }
 
-.warning{
+.warning {
   color: red;
 }
 
@@ -59,7 +62,7 @@ main form textarea {
   padding: 0.4rem;
 }
 
-main form textarea:focus{
+main form textarea:focus {
   outline: none;
 }
 

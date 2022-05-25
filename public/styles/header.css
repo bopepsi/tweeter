@@ -1,5 +1,6 @@
-body>header {
-    color: white;
+body > header {
+    margin-top: 120px;
+  color: white;
   height: 400px;
   width: 100%;
   text-align: center;
@@ -9,5 +10,5 @@ body>header {
 }
 
 header p {
-    font-size: 2rem;
+  font-size: 2rem;
 }

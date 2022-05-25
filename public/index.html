@@ -30,10 +30,16 @@
       referrerpolicy="no-referrer"
     />
     <!-- External JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/client.js" defer></script>
     <script
       type="text/javascript"
       src="/scripts/composer-char-counter.js"
@@ -63,9 +69,9 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="post" action="/tweets/">
+        <form method="post" action="/tweets/" id="create-new-tweet">
           <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" rows="1"></textarea>
+          <textarea name="text" id="tweet-text"  style="resize: none"></textarea>
           <div>
             <button type="submit">Tweet</button>
             <output
@@ -78,26 +84,30 @@
           </div>
         </form>
       </section>
-      <section id="tweet-section">
-        <article class="tweet-content">
-          <header >
-            <p id="tweet-content-name-img">
-              <img src="https://i.imgur.com/nlhLi3I.png" />
-              <span>Name</span>
+      <div id="wrapper">
+        <section id="tweets-container">
+          <article class="tweet-content">
+            <header>
+              <p id="tweet-content-name-img">
+                <img src="https://i.imgur.com/nlhLi3I.png" />
+                <span>Name</span>
+              </p>
+              <p id="tweet-content-name">@someid</p>
+            </header>
+            <p class="tweet-text" >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <p id="tweet-content-name">@someid</p>
-          </header>
-          <p class="tweet-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <footer>
-            <time id="dates">10 days ago</time>
-            <div id="icons">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article>
-      </section>
+            <footer>
+              <time id="dates">10 days ago</time>
+              <div id="icons">
+                <i class="fa-solid fa-flag"></i>
+                <i class="fa-solid fa-retweet"></i>
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </footer>
+          </article>
+        </section>
+      </div>
     </main>
   </body>
 </html>

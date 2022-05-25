@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // --- our code goes here ---
-    console.log('Ready');
+    console.log('composer-char-counter-ready');
     const textAreaElement = document.querySelector('.new-tweet textarea');
     const counterOutput = document.querySelector('[data-counter="charCounter"]');
     console.log(counterOutput.dataset.counter);
