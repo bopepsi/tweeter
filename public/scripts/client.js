@@ -6,11 +6,31 @@
 
 $(document).ready(function () {
 
-    console.log('client-js-ready');
+    const escape = function (str) {
+        let div = document.createElement("div");
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    };
 
     const $newTweetForm = $('#create-new-tweet');
     const $inputElement = $('#tweet-text');
     const $counterElement = $(`[data-counter='charCounter']`);
+    const $limitWarningElement = $('#limit-warning');
+    const $emptyWarningElement = $('#empty-warning');
+    const $createTweetIcon = $(`[data-func="create-tweet"]`);
+    const $newTweetSection = $(`[data-sec="new-tweet-sec"]`)
+
+    $createTweetIcon.click(function () {
+        if ($newTweetSection.css('display') == 'block') {
+            $newTweetSection.slideUp();
+            return;
+        }
+        else if (!($newTweetSection.css('display') == 'block')) {
+            $newTweetSection.slideDown();
+            $inputElement.select();
+            return;
+        }
+    })
 
     $newTweetForm.on('submit', function (event) {
         //? Prevent broswer default.
@@ -20,10 +40,10 @@ $(document).ready(function () {
         let inputText = $inputElement.val();
         let textLength = $inputElement.val().trim().length;
         if (textLength === 0 || inputText === null || inputText === '') {
-            return alert('Input cannot be empty.');
+            return $emptyWarningElement.slideDown();
         }
-        if (textLength >=140 ) {
-            return alert('Input exceeds limit.');
+        if (textLength > 140) {
+            return $limitWarningElement.slideDown();
         }
 
         $.post("/tweets/", queryStringText)
@@ -51,16 +71,16 @@ $(document).ready(function () {
         const tweetElement = `<article class="tweet-content">
           <header>
             <p id="tweet-content-name-img">
-              <img src="${tweetObj['user']['avatars']}"/>
-              <span>${tweetObj['user']['name']}</span>
+              <img src="${(tweetObj['user']['avatars'])}"/>
+              <span>${(tweetObj['user']['name'])}</span>
             </p>
-            <p id="tweet-content-name">${tweetObj['user']['handle']}</p>
+            <p id="tweet-content-name">${(tweetObj['user']['handle'])}</p>
           </header>
           <p class="tweet-text">
-            ${tweetObj['content']['text']}
+             ${escape(tweetObj['content']['text'])}
           </p>
           <footer>
-            <time id="dates" class="timeago">${day}</time>
+            <time id="dates" class="timeago">${(day)}</time>
             <div id="icons">
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
@@ -78,8 +98,6 @@ $(document).ready(function () {
             createTweetElement(element)
         });
     }
-
-
 
     //todo  -   Load all tweets everytime.
     loadTweets();

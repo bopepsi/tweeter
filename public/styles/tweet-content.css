@@ -2,6 +2,39 @@
   animation: flash 0.2 ease-out delay forwards;
 } */
 
+.warning-info {
+  display: none;
+  color: rgb(130, 0, 0);
+  font-weight: 400;
+  text-align: center;
+}
+
+.warning-info i {
+  padding-inline-end: 1rem;
+  padding-inline-start: 1rem;
+  animation: flash 1s ease-in-out infinite forwards;
+}
+
+@keyframes flash {
+  0% {
+    color: red;
+  }
+  50% {
+    color: #f9bd3c;
+  }
+  100% {
+    color: red;
+  }
+}
+
+#new-tweet {
+  cursor: pointer;
+}
+
+#new-tweet-sec {
+  display: none;
+}
+
 #tweet-container {
   height: 100%;
   background-color: #94a5a6;
@@ -15,6 +48,10 @@
 .tweet-content {
   border: 2px rgb(60, 60, 60) solid;
   margin: 2rem 0;
+}
+
+.tweet-content:hover {
+  box-shadow: 8px 8px gray;
 }
 
 .tweet-content header {
