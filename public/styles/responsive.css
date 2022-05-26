@@ -1,0 +1,28 @@
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    margin-block-start: 200px;
+    justify-content: space-evenly;
+  }
+  body > header {
+    background-color: #f9bd3c;
+    background-image: url(http://www.transparenttextures.com/patterns/asfalt-light.png);
+    width: 30%;
+    height: 26rem;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    top:-50px;
+  }
+  main.container {
+    margin: 0;
+    width: 60%;
+    padding: 0;
+    padding-inline-start: 3rem;
+    /* position: relative;
+    top: -50px; */
+  }
+}

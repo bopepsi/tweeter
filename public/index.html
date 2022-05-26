@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/styles/nav.css" />
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/tweet-content.css" />
+    <link rel="stylesheet" href="/styles/responsive.css" />
 
     <link
       rel="stylesheet"
@@ -37,7 +38,10 @@
       referrerpolicy="no-referrer"
       defer
     ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      defer
+    ></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js" defer></script>
@@ -54,9 +58,10 @@
       <h2>tweeter</h2>
       <div id="new-tweet" data-func="create-tweet">
         <p><strong>Write</strong> a new tweet</p>
-        <i class="fa-solid fa-angles-down" ></i>
+        <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
+
     <header>
       <div>
         <img src="/images/profile-hex.png" />
@@ -68,10 +73,10 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet" id='new-tweet-sec' data-sec="new-tweet-sec">
+      <section class="new-tweet" id="new-tweet-sec" data-sec="new-tweet-sec">
         <p class="warning-info" id="limit-warning">
-          <i class="fa-solid fa-circle-radiation"></i>Too long, Only 140
-          chars allowed.
+          <i class="fa-solid fa-circle-radiation"></i>Too long, Only 140 chars
+          allowed.
           <i class="fa-solid fa-circle-radiation"></i>
         </p>
         <p class="warning-info" id="empty-warning">
@@ -118,8 +123,9 @@
           </article>
         </section>
       </div>
-      
+      <button class="scroll-btn" data-func="scroll-to-top">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
     </main>
-    <button class="scroll-btn" data-func="scroll-to-top"><i class="fa-solid fa-angles-up" ></i></button>
   </body>
 </html>
