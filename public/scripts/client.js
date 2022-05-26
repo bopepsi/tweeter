@@ -6,6 +6,7 @@
 
 $(document).ready(function () {
 
+    //? Prevent XSS attack.
     const escape = function (str) {
         let div = document.createElement("div");
         div.appendChild(document.createTextNode(str));
@@ -22,11 +23,14 @@ $(document).ready(function () {
 
     $createTweetIcon.click(function () {
         if ($newTweetSection.css('display') == 'block') {
+            //? JQuery slideUp effect to hide the element, if its display => block.
             $newTweetSection.slideUp();
             return;
         }
         else if (!($newTweetSection.css('display') == 'block')) {
+            //? JQuery slideUp effect to hide the element, if its display => none.
             $newTweetSection.slideDown();
+            //? Also select the input element for better UX.
             $inputElement.select();
             return;
         }
@@ -39,6 +43,7 @@ $(document).ready(function () {
         const queryStringText = $(this).serialize();
         let inputText = $inputElement.val();
         let textLength = $inputElement.val().trim().length;
+        //? Check input text length to show proper error msg.
         if (textLength === 0 || inputText === null || inputText === '') {
             return $emptyWarningElement.slideDown();
         }
