@@ -4,37 +4,25 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 
-##### Main page
+##### Main tweeter page
 
-!["Main page"](https://github.com/bopepsi/tiny-app/blob/master/docs/urls.png?raw=true)
+!["Main page"](https://github.com/bopepsi/tweeter/blob/master/docs/main-page.png?raw=true)
 
-##### Sign up page
+##### New post created with timestamp
 
-!["Sign up page"](https://github.com/bopepsi/tiny-app/blob/master/docs/register.png?raw=true)
+!["New post created with timestamp"](https://github.com/bopepsi/tweeter/blob/master/docs/new-post.png?raw=true)
 
-##### Login with invalid email
+##### Empty input error
 
-!["Login with invalid email"](https://github.com/bopepsi/tiny-app/blob/master/docs/login-wrong-email.png?raw=true)
+!["Empty input error"](https://github.com/bopepsi/tweeter/blob/master/docs/empty-input-error.png?raw=true)
 
-##### Login with invalid password
+##### Out of limit chars error
 
-!["Login with invalid password"](https://github.com/bopepsi/tiny-app/blob/master/docs/login-wrong-password.png?raw=true)
+!["Out of allowed chars error"](https://github.com/bopepsi/tweeter/blob/master/docs/out-of-limit-error.png?raw=true)
 
-##### User logged in without data
+##### Back to top button
 
-!["User logged in without data"](https://github.com/bopepsi/tiny-app/blob/master/docs/urls-without-data.png?raw=true)
-
-##### User logged in with data
-
-!["User logged in with data"](https://github.com/bopepsi/tiny-app/blob/master/docs/urls-with-many-data.png?raw=true)
-
-##### Create new tinyURL
-
-!["Create new tinyURL"](https://github.com/bopepsi/tiny-app/blob/master/docs/urls-new.png?raw=true)
-
-##### Edit page, more visited info
-
-!["Edit page, more visited info"](https://github.com/bopepsi/tiny-app/blob/master/docs/urls-edit.png?raw=true)
+!["Back to top button"](https://github.com/bopepsi/tweeter/blob/master/docs/back-to-top-btn.png?raw=true)
 
 ## Dependencies
 
