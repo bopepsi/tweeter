@@ -42,7 +42,7 @@
 }
 
 #wrapper {
-  height: 100%;
+  height: max-content;
 }
 
 .tweet-content {
